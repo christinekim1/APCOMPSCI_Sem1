@@ -5,24 +5,21 @@ public class EX_01
 	public static void main(String[]args)
 	{
 		Scanner keyboard = new Scanner(System.in);
-		
+		//inputs item1
 		System.out.println("Please enter item 1:");
 		String order1 = keyboard.nextLine();
-		
 		System.out.println("Please enter the price:");
 		double price1 = keyboard.nextDouble();
-		
+		keyboard.nextLine();
+		//inputs item2
 		System.out.println("Please enter item 2:");
 		String order2 = keyboard.nextLine();
-		keyboard.nextLine();
-		
 		System.out.println("Please enter the price:");
 		double price2 = keyboard.nextDouble();
-		
+		//inputs item3
 		System.out.println("Please enter item 3:");
-		String order3 = keyboard.nextLine();
 		keyboard.nextLine();
-		
+		String order3 = keyboard.nextLine();
 		System.out.println("Please enter the price:");
 		double price3 = keyboard.nextDouble();
 		
@@ -34,23 +31,27 @@ public class EX_01
 		EX_01 form = new EX_01();
 	
 		System.out.println("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>");
-		String word1 = order1;
-		double number1 = price1;
-		form.format(word1, number1);
+		form.format(order1, price1);
+		form.format(order2, price2);
+		form.format(order3, price3);
 		
-		String word2 = order2;
-		double number2 = price2;
-		form.format(word2, number2);
+		System.out.println("\n");
 		
-		String word3 = order3;
-		double number3 = price3;
-		form.format(word3, number3);
+		double number4 = subtotal;
+		form.format("Subtotal:", number4);
+
+		double number5 = tax;
+		form.format("Tax:", number5);
+
+		double number6 = total;
+		form.format("Total", number6);
 		
+		System.out.println("\n_____________________________________________\n* Thank you for your support *");
 	}
 	
 	public void format(String word, double number)
 	{
-		System.out.printf("\n * %16s ........      %10.2f", word, number);
+		System.out.printf("\n%-1s %20s %25s\t%25.2f","*  ", word,"............", number);
 		
 	}
 }
