@@ -16,17 +16,17 @@ public class Average
 		num2 = keyboard.nextDouble();
 		System.out.println("Please enter the third number:");
 		num3 = keyboard.nextDouble();
-		average();
-		print();
+		print(average(num1, num2, num3));
+	}
+		
+	
+	public static double average(double num1, double num2, double num3)
+	{
+		return (num1 + num2 + num3)/3;
 	}
 	
-	public static void average()
+	public static void print(double num1, double num2, double num3, double avg)
 	{
-		avg = (num1 + num2 + num3)/3;
-	}
-	
-	public static void print()
-	{
-		System.out.println("The average of  " + num1 +", " + num2 + ", and " + num3 + " is " + avg + ".");
+		System.out.printf("The average of %1.1f, %1.1f, and %1.1f is %.5f", num1, num2, num3, avg);
 	}
 }
