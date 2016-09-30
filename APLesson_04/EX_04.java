@@ -15,9 +15,7 @@ public class EX_04
 		
 		double vol = subwoof.volume(height, width, length, 1728.00);
 		System.out.println("Your volume in cubic feet is: "+ vol);
-		
-		
-		
+
 	}
 	
 	public double volume(double h, double w, double l, double k)
