@@ -8,23 +8,19 @@ public class EX_08
 	
 	public static void main(String[]args)
 	{	
-		sing();
-		sing();
-		sing();
-		sing();
+		sing("Na", 4);
+		sing("Na", 4);
+		sing("Hey", 3);
+		sing("Goodbye!", 1);
 	}
-	public static void sing()
+	public static void sing(String word, int repeat)
 	{
-		System.out.println("Please enter your word:");
-		word = keyboard.next();
-		System.out.println("How many times should it repeat?");
-		repeat = keyboard.nextInt();
 		
 		for(int i = 1; i <= repeat; i++)
 		{
 			System.out.print(word + " ");
-			System.out.println("\n");
 		}
+		System.out.println("");
 	}
 }
 
