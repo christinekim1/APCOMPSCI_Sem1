@@ -14,9 +14,9 @@ public class Lab_02
 		String address = "1600 Pennsylvania Avenue";
 		System.out.println(address);
 		String city = "Washington DC";
-		System.out.println(city);
+		String state = "MD";
 		String zip = "20500";
-		System.out.println(zip);
+		System.out.println(city + ", " + state + " " + zip);
 		
 		System.out.println("\n");
 		
