@@ -9,7 +9,7 @@ public abstract class ToyClass
 		this.name = "";
 		this.count = 1;
 	}
-	public  ToyClass(String n)
+	public ToyClass(String n)
 	{
 		this.name = n;
 		this.count = 1;

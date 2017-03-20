@@ -16,7 +16,7 @@ public class ToyStore
 	public void loadToys(String ts)
 	{
 		ToyList = new ArrayList<ToyClass>();
-		ArrayList<String> Toys = new ArrayList<>(Arrays.asList(ts.split(",")));
+		ArrayList<String> Toys = new ArrayList<>(Arrays.asList(ts.split(", ")));
 		
 		for(int i=0; i < Toys.size(); i+=2)
 		{
@@ -30,7 +30,7 @@ public class ToyStore
 				{
 					ToyList.add(new Car(name));
 				}
-				if(type.equals("Action Figure"))
+				if(type.equals("AF"))
 				{
 					ToyList.add(new AFigure(name));
 				}
@@ -76,11 +76,11 @@ public class ToyStore
 		
 		for(ToyClass t : ToyList) 
 		{
-			if(t.equals(cars))
+			if(t.getType().equals("Car"))
 			{
 				cars ++;
 			}
-			else
+			else if(t.getType().equals("AF"))
 			{
 				figures ++;
 			}
