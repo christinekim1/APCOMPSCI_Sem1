@@ -8,16 +8,10 @@ import java.util.ArrayList;
  */
 public class Deck {
 
-	/**
-	 * cards contains all the cards in the deck.
-	 */
+
 	private List<Card> cards;
 
-	/**
-	 * size is the number of not-yet-dealt cards.
-	 * Cards are dealt from the top (highest index) down.
-	 * The next card to be dealt is at size - 1.
-	 */
+
 	private int size;
 
 
@@ -31,7 +25,13 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		
+		cards = new ArrayList<Card>();
+		for(int i = 0; i < ranks.length(); i++)
+		{
+			Card cards = new Card(ranks[i], suits[i], values[i]);
+		}
+		size = cards.size();
+		shuffle();
 	}
 
 
@@ -41,6 +41,13 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if(size == 0){
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	/**
@@ -49,6 +56,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return size;
 	}
 
 	/**
@@ -57,6 +65,7 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+
 	}
 
 	/**
@@ -66,6 +75,10 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		size = size - 1;
+		Card deal = cards.get(size);
+		return deal;
+
 	}
 
 	/**
